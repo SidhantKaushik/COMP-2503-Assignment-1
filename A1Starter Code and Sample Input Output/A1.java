@@ -52,7 +52,7 @@ public class A1 {
 		*/ 
 		while (input.hasNext()) {
 			String currWord = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
-			
+			System.out.println(currWord);
 			if (!currWord.isEmpty()) {
 				totalwordcount++;
 			}
@@ -66,8 +66,7 @@ public class A1 {
 				 } else { 
 					 a.increaseFreq(); 
 				 } 
-			 }
-			break; 		
+			 } 		
 		}
 		
 	}
