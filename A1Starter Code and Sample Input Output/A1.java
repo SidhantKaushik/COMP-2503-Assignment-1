@@ -77,10 +77,24 @@ public class A1 {
 
 	}
 
-	private void createAvenger(String input) {
+	//
+	private Avenger createAvenger(String input) {
+
+		for (int i = 0; i<=10; i++) {
+			for (int x=0; x<=2; i++) {
+				if (in.equals(avengerRoster[i][x]) {
+
+				}
+			}
+		}
+
+		return null; 
+	}
+	private String ordered() {
+		
+		return null;
 		
 	}
-
 	/**
 	 * print the results
 	 */
