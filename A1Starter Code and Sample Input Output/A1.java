@@ -52,11 +52,10 @@ public class A1 {
 		*/ 
 		while (input.hasNext()) {
 			String currWord = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
-			System.out.println(currWord);
 			if (!currWord.isEmpty()) {
 				totalwordcount++;
 			}
-				
+		
 			 Avenger a = createAvenger(currWord);
 			 
 			 if (a != null) { 
@@ -66,7 +65,10 @@ public class A1 {
 				 } else { 
 					 a.increaseFreq(); 
 				 } 
-			 } 		
+			 }
+			 if(input.next().equals("break")) {
+				 break;
+			 }
 		}
 		
 	}
@@ -98,7 +100,7 @@ public class A1 {
 	private String ordered() {
 		String avengerList = null;
 		for(int i = 0; i<avengersArrayList.size();i++) {
-			avengerList = avengerList + "i: " + avengersArrayList.get(i) + " ";
+			avengerList = avengerList + i +": " + avengersArrayList.get(i).toString() + " ";
 		}
 		return avengerList;
 	}
