@@ -17,7 +17,7 @@ public class A1 {
 			{ "blackwidow", "romanoff" }, { "hulk", "banner" }, { "blackpanther", "tchalla" }, { "thor", "odinson" },
 			{ "hawkeye", "barton" }, { "warmachine", "rhodes" }, { "spiderman", "parker" },
 			{ "wintersoldier", "barnes" } };
-
+	
 	private int topN = 4;
 	private int totalwordcount = 0;
 	private ArrayList<Avenger> avengersArrayList = new ArrayList<>();
@@ -30,6 +30,7 @@ public class A1 {
 	public void run() {
 		readInput();
 		printResults();
+		
 	}
 
 	/**
@@ -49,6 +50,34 @@ public class A1 {
 				- if this avenger has already been mentioned, increase the frequency count for the object already in the list.
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
 		*/ 
+		while(input.hasNext()) {
+			//removing trailing or leading blanks
+			String currWord = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
+			//adding to word count if not empty
+			if (!currWord.isEmpty()) {
+				totalwordcount++;
+				for (int i = 0; i<=10; i++) {
+					for (int x=0; x<=2; i++) {
+						if (currWord.equals(avengerRoster[i][x])){
+//							Avenger n = new Avenger(avengerRoster[i][0]);
+//							if(avengersArrayList.contains(n)) {
+//								n.increaseFreq();
+//							} else {
+//								avengersArrayList.add(n);
+//							}
+						}
+					}
+				}
+			}
+			
+			
+			
+		}
+
+
+	}
+
+	private void createAvenger(String input) {
 		
 	}
 
