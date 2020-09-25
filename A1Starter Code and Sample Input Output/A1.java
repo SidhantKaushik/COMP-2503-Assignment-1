@@ -50,50 +50,58 @@ public class A1 {
 				- if this avenger has already been mentioned, increase the frequency count for the object already in the list.
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
 		*/ 
-		while(input.hasNext()) {
-			//removing trailing or leading blanks
+		while (input.hasNext()) {
 			String currWord = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
-			//adding to word count if not empty
+			
 			if (!currWord.isEmpty()) {
 				totalwordcount++;
-				for (int i = 0; i<=10; i++) {
-					for (int x=0; x<=2; i++) {
-						if (currWord.equals(avengerRoster[i][x])){
-//							Avenger n = new Avenger(avengerRoster[i][0]);
-//							if(avengersArrayList.contains(n)) {
-//								n.increaseFreq();
-//							} else {
-//								avengersArrayList.add(n);
-//							}
-						}
+			}
+				
+			 Avenger a = createAvenger(currWord);
+			 
+			 if (a != null) { 
+				 if (!listContains(a)) { 
+					 a.setFreq(1);
+					 avengersArrayList.add(a); 
+				 } else { 
+					 a.increaseFreq(); 
+				 } 
+			 }
+			break; 		
+		}
+		
+	}
+
+	private boolean listContains(Avenger a) {
+		return avengersArrayList.contains(a);
+	}
+
+	private Avenger createAvenger(String input) {
+		
+		Avenger a = null;
+		
+		for (int r = 0; r < avengerRoster.length; r++) {
+			for (int c = 0; c < 2; c++) {
+				
+				if (input.equals(avengerRoster[r][c])) { //if input is part of the roster, make a new Avenger
+					if (c == 0) { //if the input is an alias
+						a = new Avenger(input, avengerRoster[r][c] );
+					} else if (c == 1) { //if the input is a last name
+						a = new Avenger(avengerRoster[r][c], input);
 					}
 				}
 			}
-			
-			
-			
 		}
-
-
+		
+		return a; 
 	}
 
-	//
-	private Avenger createAvenger(String input) {
-
-		for (int i = 0; i<=10; i++) {
-			for (int x=0; x<=2; i++) {
-				if (in.equals(avengerRoster[i][x]) {
-
-				}
-			}
-		}
-
-		return null; 
-	}
 	private String ordered() {
-		
-		return null;
-		
+		String avengerList = null;
+		for(int i = 0; i<avengersArrayList.size();i++) {
+			avengerList = avengerList + "i: " + avengersArrayList.get(i) + " ";
+		}
+		return avengerList;
 	}
 	/**
 	 * print the results
@@ -106,7 +114,7 @@ public class A1 {
 		System.out.println("All avengers in the order they appeared in the input stream:");
 		// Todo: Print the list of avengers in the order they appeared in the input
 		// Make sure you follow the formatting example in the sample output
-		System.out.println();
+		System.out.println(ordered());
 		
 		System.out.println("Top " + topN + " most popular avengers:");
 		// Todo: Print the most popular avengers, see the instructions for tie breaking

@@ -10,6 +10,10 @@ public class Avenger implements Comparable <Avenger> {
         heroAlias = givenAlias;
     }
 
+    public void setFreq(int givenFreq) {
+		frequency = givenFreq;
+	}
+
     public void increaseFreq() {
         frequency++;
     }
