@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /** 
  * COMP 2503 Winter 2020 Assignment 1 
@@ -36,6 +37,8 @@ public class A1 {
 	 * how many times avengers are mentioned by alias or last name.
 	 */
 	private void readInput() {
+
+		Scanner input = new Scanner(System.in);
 		/*
 		In a loop, while the scanner object has not reached end of stream,
 		 	- read a word.
@@ -46,6 +49,7 @@ public class A1 {
 				- if this avenger has already been mentioned, increase the frequency count for the object already in the list.
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
 		*/ 
+		
 	}
 
 	/**
