@@ -147,6 +147,16 @@ public class A1 {
 		}
 		return avengerList;
 	}
+	
+	private String mostPopular() {
+		String avengerList = "";
+		
+		Collections.sort(avengersArrayList, new MostFrequent());
+		for(int i = 0; i<avengersArrayList.size();i++) {
+			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
+		}
+		return avengerList;
+	}
 	/**
 	 * print the results
 	 */
@@ -172,7 +182,7 @@ public class A1 {
 
 		System.out.println("All mentioned avengers in alphabetical order:");
 		// Todo: Print the list of avengers in alphabetical order
-		System.out.println();
+		//System.out.println();
 		System.out.println(alphabeticalOrder());
 	}
 }
