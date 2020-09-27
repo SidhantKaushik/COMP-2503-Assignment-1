@@ -59,16 +59,15 @@ public class A1 {
 			if (!existsInRoster(currWord)) {
 				  
 				  Avenger a = createAvenger(currWord); // creates a new avenger object
-					
-				  if (a != null) {
-					  if (listContains(a)) { //if its already mentioned, increase frequency
-						  a.increaseFreq();
-					  } else { //if not mentioned then add the object and set the freq
-						  a.setFreq(1); 
-						  avengersArrayList.add(a); 
-					  }
-				  }
-				 
+
+				  if (a!= null) {
+					   if (listContains(a)) {
+						   increaseFreq(a);
+					   } else {
+						   a.setFreq();
+						   avengersArrayList.add(a);
+					   }
+				  }	 
 			}
 		}
 		
@@ -89,10 +88,10 @@ public class A1 {
 	private boolean listContains(Avenger a) {
 		
 		for (Avenger currAvenger : avengersArrayList) {
-			if (currAvenger.getAlias() == a.getAlias() && 
-					currAvenger.getName() == a.getName()) {
+			if (currAvenger.getAlias().equals(a.getAlias()) || 
+					currAvenger.getName().equals(a.getName())) {
 				return true;
-			}
+		}
 	}
 		
 		return false;
@@ -122,8 +121,7 @@ public class A1 {
 					} else if (c == 0) { //if the input is a last name
 						a = new Avenger(avengerRoster[r][1], input);
 					}
-				}
-				
+				}		
 			}
 			
 		}
@@ -131,7 +129,7 @@ public class A1 {
 	}
 
 	private String ordered() {
-		String avengerList = null;
+		String avengerList = "";
 		for(int i = 0; i<avengersArrayList.size();i++) {
 			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
 		}
