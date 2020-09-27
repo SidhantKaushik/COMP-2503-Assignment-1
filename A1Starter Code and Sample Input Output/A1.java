@@ -100,8 +100,8 @@ public class A1 {
 	private void increaseFreq(Avenger a) {
 		
 		for (Avenger currAvenger : avengersArrayList) {
-			if (currAvenger.getAlias() == a.getAlias() && 
-					currAvenger.getName() == a.getName()) {
+			if (currAvenger.getAlias().equals(a.getAlias()) || 
+					currAvenger.getName().equals(a.getName())) {
 				currAvenger.increaseFreq();
 			}
 		}
