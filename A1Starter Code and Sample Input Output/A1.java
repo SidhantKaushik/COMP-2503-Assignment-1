@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /** 
@@ -135,6 +136,17 @@ public class A1 {
 		}
 		return avengerList;
 	}
+	
+	private String alphabeticalOrder() {
+		String avengerList = "";
+		
+		Collections.sort(avengersArrayList);
+		
+		for(int i = 0; i<avengersArrayList.size();i++) {
+			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
+		}
+		return avengerList;
+	}
 	/**
 	 * print the results
 	 */
@@ -161,5 +173,6 @@ public class A1 {
 		System.out.println("All mentioned avengers in alphabetical order:");
 		// Todo: Print the list of avengers in alphabetical order
 		System.out.println();
+		System.out.println(alphabeticalOrder());
 	}
 }
