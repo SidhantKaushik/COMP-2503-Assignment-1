@@ -38,7 +38,6 @@ public class A1 {
 	 * how many times avengers are mentioned by alias or last name.
 	 */
 	private void readInput() {
-
 		Scanner input = new Scanner(System.in);
 		/*
 		In a loop, while the scanner object has not reached end of stream,
@@ -62,12 +61,15 @@ public class A1 {
 				 if (!listContains(a)) { 
 					 a.setFreq(1);
 					 avengersArrayList.add(a); 
-				 } else { 
-					 a.increaseFreq(); 
+				 } else {
+					 for(int i = 0; i<avengersArrayList.size(); i++) {
+						 System.out.println("getting here");
+						 if(avengersArrayList.get(i).equals(a)) {
+							 
+							 avengersArrayList.get(i).increaseFreq();
+						 }
+					 }
 				 } 
-			 }
-			 if(input.next().equals("break")) {
-				 break;
 			 }
 		}
 		
@@ -100,7 +102,7 @@ public class A1 {
 	private String ordered() {
 		String avengerList = null;
 		for(int i = 0; i<avengersArrayList.size();i++) {
-			avengerList = avengerList + i +": " + avengersArrayList.get(i).toString() + " ";
+			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
 		}
 		return avengerList;
 	}
