@@ -51,22 +51,28 @@ public class A1 {
 		*/ 
 		while (input.hasNext()) {
 			String currWord = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
+			
 			if (!currWord.isEmpty()) {
 				totalwordcount++;
 			}
 
-			if (existsInRoster(currWord)) {
-					Avenger a = createAvenger(currWord); // creates a new avenger object
+			if (!existsInRoster(currWord)) {
+				  
+				  Avenger a = createAvenger(currWord); // creates a new avenger object
 					
-					if (listContains(a)) { //if its already mentioned, increase frequency 
-						increaseFreq(a);
-					} else { //if not mentioned then add the object and set the frequency
-						a.setFreq(1);
-						avengersArrayList.add(a); 
-					} 
+				  if (a != null) {
+					  if (listContains(a)) { //if its already mentioned, increase frequency
+						  a.increaseFreq();
+					  } else { //if not mentioned then add the object and set the freq
+						  a.setFreq(1); 
+						  avengersArrayList.add(a); 
+					  }
+				  }
+				 
 			}
 		}
 		
+		input.close();
 	}
 
 	private boolean existsInRoster (String input){
@@ -83,11 +89,11 @@ public class A1 {
 	private boolean listContains(Avenger a) {
 		
 		for (Avenger currAvenger : avengersArrayList) {
-			if (currAvenger.getAlias() == a.getAlias() || 
+			if (currAvenger.getAlias() == a.getAlias() && 
 					currAvenger.getName() == a.getName()) {
 				return true;
 			}
-		}
+	}
 		
 		return false;
 	}
@@ -107,21 +113,22 @@ public class A1 {
 		Avenger a = null;
 		
 		for (int r = 0; r < avengerRoster.length; r++) {
+			
 			for (int c = 0; c < 2; c++) {
-				
-				if (input.equals(avengerRoster[r][c])) { //if input is part of the roster, make a new Avenger
-					if (c == 0) { //if the input is an alias
-						a = new Avenger(input, avengerRoster[r][c] );
-					} else if (c == 1) { //if the input is a last name
-						a = new Avenger(avengerRoster[r][c], input);
+
+				if (input.equals(avengerRoster[r][c])) {
+					if (c == 1) { //if the input is an name
+						a = new Avenger(input, avengerRoster[r][0]);
+					} else if (c == 0) { //if the input is a last name
+						a = new Avenger(avengerRoster[r][1], input);
 					}
 				}
+				
 			}
+			
 		}
-		
-		return a; 
+		return a;
 	}
-
 
 	private String ordered() {
 		String avengerList = null;

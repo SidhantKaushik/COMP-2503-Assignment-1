@@ -18,6 +18,10 @@ public class Avenger implements Comparable <Avenger> {
         frequency++;
     }
     
+    public int getFreq() {
+    	return frequency;
+    }
+    
     public String getName() {
     	return heroName;
     }
