@@ -17,6 +17,14 @@ public class Avenger implements Comparable <Avenger> {
     public void increaseFreq() {
         frequency++;
     }
+    
+    public String getName() {
+    	return heroName;
+    }
+    
+    public String getAlias() {
+    	return heroAlias;
+    }
 	
 	@Override
 	public int compareTo(Avenger other) {

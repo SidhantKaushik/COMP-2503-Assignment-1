@@ -54,29 +54,52 @@ public class A1 {
 			if (!currWord.isEmpty()) {
 				totalwordcount++;
 			}
-		
-			 Avenger a = createAvenger(currWord);
-			 
-			 if (a != null) { 
-				 if (!listContains(a)) { 
-					 a.setFreq(1);
-					 avengersArrayList.add(a); 
-				 } else {
-					 for(int i = 0; i<avengersArrayList.size(); i++) {
-						 System.out.println("getting here");
-						 if(avengersArrayList.get(i).equals(a)) {
-							 
-							 avengersArrayList.get(i).increaseFreq();
-						 }
-					 }
-				 } 
-			 }
+
+			if (existsInRoster(currWord)) {
+					Avenger a = createAvenger(currWord); // creates a new avenger object
+					
+					if (listContains(a)) { //if its already mentioned, increase frequency 
+						increaseFreq(a);
+					} else { //if not mentioned then add the object and set the frequency
+						a.setFreq(1);
+						avengersArrayList.add(a); 
+					} 
+			}
 		}
 		
 	}
 
+	private boolean existsInRoster (String input){
+	    for(int i = 0; i < avengerRoster.length; i++){
+	        for(int j = 0; j < 2; j++){
+	            if(avengerRoster[i][j] == input) {
+	            	return true;
+	            }
+	        }
+	    }
+	    return false;
+	}
+	
 	private boolean listContains(Avenger a) {
-		return avengersArrayList.contains(a);
+		
+		for (Avenger currAvenger : avengersArrayList) {
+			if (currAvenger.getAlias() == a.getAlias() || 
+					currAvenger.getName() == a.getName()) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	private void increaseFreq(Avenger a) {
+		
+		for (Avenger currAvenger : avengersArrayList) {
+			if (currAvenger.getAlias() == a.getAlias() && 
+					currAvenger.getName() == a.getName()) {
+				currAvenger.increaseFreq();
+			}
+		}
 	}
 
 	private Avenger createAvenger(String input) {
@@ -98,6 +121,7 @@ public class A1 {
 		
 		return a; 
 	}
+
 
 	private String ordered() {
 		String avengerList = null;
