@@ -149,7 +149,8 @@ public class A1 {
 	}
 	
 	private String mostPopular() {
-		Collections.sort(avengersArrayList, new MostFrequent());
+		MostFrequent a = new MostFrequent();
+		Collections.sort(avengersArrayList, a);
 		return collectionSort();
 	}
 	private String leastPopular() {
@@ -164,7 +165,7 @@ public class A1 {
 				avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
 			}
 			}
-			else {
+		else {
 				for(int i = 0; i<avengersArrayList.size();i++) {
 					avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
 				}

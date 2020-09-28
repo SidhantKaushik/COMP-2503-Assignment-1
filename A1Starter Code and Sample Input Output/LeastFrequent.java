@@ -3,7 +3,7 @@ import java.util.Comparator;
 public class LeastFrequent implements Comparator<Avenger>{
 	public int compare(Avenger o1, Avenger o2){
 		if (o1.getFreq()>o2.getFreq()) {
-			return -1;
+			return 1;
 		}
 		if (o1.getFreq() == (o2.getFreq())) {
 			if (o1.getName().length()>(o2.getName().length())) {
@@ -22,7 +22,7 @@ public class LeastFrequent implements Comparator<Avenger>{
 			}
 		}
 		else {
-			return 1;
+			return -1;
 		}
 	}
 }
