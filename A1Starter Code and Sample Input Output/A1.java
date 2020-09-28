@@ -55,7 +55,9 @@ public class A1 {
 			
 			String currWord = input.next().trim().toLowerCase().replaceAll("'s", "").replaceAll("[^A-Za-z]", "");
 			
-			if (currWord.length()> 0) {
+			if (!currWord.isEmpty()) {
+				totalwordcount++;
+			}
 
 			if (!existsInRoster(currWord)) {
 				  
