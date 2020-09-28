@@ -34,10 +34,10 @@ public class A1 {
 		
 	}
 
-	/**
-	 * read the input stream and keep track  
-	 * how many times avengers are mentioned by alias or last name.
-	 */
+		/**
+		 * read the input stream and keep track  
+		 * how many times avengers are mentioned by alias or last name.
+		 */
 	private void readInput() {
 		Scanner input = new Scanner(System.in);
 		/*
@@ -156,7 +156,7 @@ public class A1 {
 					}
 				}		
 			}
-			//a
+		
 		}
 		return a;
 	}
