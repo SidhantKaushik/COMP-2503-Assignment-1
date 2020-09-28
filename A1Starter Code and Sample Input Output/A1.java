@@ -40,10 +40,15 @@ public class A1 {
 		 */
 	private void readInput() {
 		Scanner input = new Scanner(System.in);
-
+	
 		while (input.hasNext()) {
+			String next = input.next();
+			if (next.contains("'")) {
+				String[] currWord1 = next.split("'");
+				next = currWord1[0].toString();
+			}
+			String currWord = next.toLowerCase().replaceAll("[^a-z]", "").trim();
 			
-			String currWord = input.next().toLowerCase().replaceAll("'s", "").replaceAll("[^a-z]", "").trim();
 			if (!currWord.isBlank()) {
 				totalwordcount++;
 			}
