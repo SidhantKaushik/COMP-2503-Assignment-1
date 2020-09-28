@@ -1,5 +1,12 @@
 import java.util.Comparator;
 
+/**
+ * Comparator to sort avengersArrayList into the least four mentioned
+ * 
+ * @author Sidhant Kaushik, Erika Robles
+ * @version Fall 2020
+ */
+
 public class LeastFrequent implements Comparator<Avenger>{
 
 		/**

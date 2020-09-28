@@ -1,3 +1,10 @@
+/**
+ * Represents fuctionality of an Avenger, including their name and alias
+ * 
+ * @author Sidhant Kaushik, Erika Robles
+ * @version Fall 2020
+ */
+
 
 public class Avenger implements Comparable <Avenger> {
 
