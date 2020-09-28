@@ -45,7 +45,6 @@ public class A1 {
 			
 			String currWord = input.next().toLowerCase().replaceAll("'s", "").replaceAll("[^a-z]", "").trim();
 			if (!currWord.isBlank()) {
-
 				totalwordcount++;
 			}
 
