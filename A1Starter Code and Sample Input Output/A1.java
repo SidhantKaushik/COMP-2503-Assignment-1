@@ -169,10 +169,10 @@ public class A1 {
 		return avengerList;
 	}
 	
-	/**
-	 * sorts the avengerArrayList in alphabetical order of their alias
-	 * @return a string of each avenger mentioned in the correct order
-	 */
+		/**
+		 * sorts the avengerArrayList in alphabetical order of their alias
+		 * @return a string of each avenger mentioned in the correct order
+		 */
 	
 	private String alphabeticalOrder() {
 		String avengerList = "";
@@ -184,6 +184,12 @@ public class A1 {
 		}
 		return avengerList;
 	}
+	
+		/**
+		 * sorts the avengerArrayList from highest frequency to the least
+		 * if there is a tie, it sorts them into alphabetical order of their alias
+		 * @return a string of each avenger mentioned in the correct order
+		 */
 	
 	private String mostPopular() {
 		MostFrequent a = new MostFrequent();
