@@ -54,7 +54,7 @@ public class A1 {
 			String unEditedWord = input.next();
 			String currWord = unEditedWord.trim().toLowerCase().replaceAll("'s", "").replaceAll("[^a-z]", "");
 			
-			if (!unEditedWord.isEmpty()) {
+			if (!unEditedWord.isBlank()) {
 				totalwordcount++;
 			}
 
@@ -76,6 +76,12 @@ public class A1 {
 		input.close();
 	}
 
+		/*
+		 * Helper method
+		 * checks if the given String input exists in the avengerRoster array
+		 * @param takes in the input, which is either a name, alias or invalid input
+		 * @return true, if the input is in the avengerRoster, false otherwise
+		 */
 	private boolean existsInRoster (String input){
 	    for(int i = 0; i < avengerRoster.length; i++){
 	        for(int j = 0; j < 2; j++){
