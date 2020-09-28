@@ -51,7 +51,7 @@ public class A1 {
 				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
 		*/ 
 		while (input.hasNext()) {
-			String currWord = input.next().trim().toLowerCase().replaceAll("[^a-z]", "");
+			String currWord = input.next().trim().toLowerCase().replaceAll("'s", "").replaceAll("[^a-z]", "");
 			
 			if (!currWord.isEmpty()) {
 				totalwordcount++;
