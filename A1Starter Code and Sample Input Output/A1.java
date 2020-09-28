@@ -169,6 +169,11 @@ public class A1 {
 		return avengerList;
 	}
 	
+	/**
+	 * sorts the avengerArrayList in alphabetical order of their alias
+	 * @return a string of each avenger mentioned in the correct order
+	 */
+	
 	private String alphabeticalOrder() {
 		String avengerList = "";
 		
