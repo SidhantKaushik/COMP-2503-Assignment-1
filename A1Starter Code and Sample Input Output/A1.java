@@ -160,6 +160,11 @@ public class A1 {
 		}
 		return a;
 	}
+	
+		/**
+		 * sorts the avengerArrayList in the order they are appeared on the input stream
+		 * @return a string of each avenger mentioned in the correct order
+		 */
 
 	private String ordered() {
 		String avengerList = "";
