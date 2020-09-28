@@ -6,8 +6,16 @@ public class LeastFrequent implements Comparator<Avenger>{
 			return -1;
 		}
 		if (o1.getFreq() == (o2.getFreq())) {
-			if (o1.getAlias().compareTo(o2.getAlias())>0) {
+			if (o1.getName().length()>(o2.getName().length())) {
 				return 1;
+			}
+			if (o1.getName().length() == (o2.getName().length())){
+				if (o1.getName().compareTo(o2.getName()) > 0) {
+					return 1;
+				}
+				else {
+					return -1;
+				}
 			}
 			else {
 				return -1;
