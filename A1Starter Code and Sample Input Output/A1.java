@@ -81,6 +81,7 @@ public class A1 {
 		 * @param takes in the input, which is either a name, alias or invalid input
 		 * @return true, if the input is in the avengerRoster, false otherwise
 		 */
+	
 	private boolean existsInRoster (String input){
 	    for(int i = 0; i < avengerRoster.length; i++){
 	        for(int j = 0; j < 2; j++){
@@ -91,6 +92,13 @@ public class A1 {
 	    }
 	    return false;
 	}
+	
+		/**
+		 * Helper method
+		 * checks if the given Avenger input already exists in the avengerArrayList
+		 * @param takes in the Avenger to look in the list for
+		 * @return true, if the input is in the avengerArrayList, false otherwise
+		 */
 	
 	private boolean listContains(Avenger a) {
 		
@@ -103,6 +111,13 @@ public class A1 {
 		
 		return false;
 	}
+	
+		/**
+		 * Helper method
+		 * looks for the given Avenger in avengersArrayList, 
+		 * then it takes that Avenger and increases its frequency by 1
+		 * @param takes in the Avenger to look in the list for
+		 */
 	
 	private void increaseFreq(Avenger a) {
 		
