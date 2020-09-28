@@ -227,23 +227,15 @@ public class A1 {
 		System.out.println();
 
 		System.out.println("All avengers in the order they appeared in the input stream:");
-		// Todo: Print the list of avengers in the order they appeared in the input
-		// Make sure you follow the formatting example in the sample output
 		System.out.println(ordered());
 		
 		System.out.println("Top " + topN + " most popular avengers:");
-		// Todo: Print the most popular avengers, see the instructions for tie breaking
-		// Make sure you follow the formatting example in the sample output
 		System.out.println(mostPopular());
 
 		System.out.println("Top " + topN + " least popular avengers:");
-		// Todo: Print the least popular avengers, see the instructions for tie breaking
-		// Make sure you follow the formatting example in the sample output		
 		System.out.println(leastPopular());
 
 		System.out.println("All mentioned avengers in alphabetical order:");
-		// Todo: Print the list of avengers in alphabetical order
-		//System.out.println();
 		System.out.println(alphabeticalOrder());
 	}
 }
