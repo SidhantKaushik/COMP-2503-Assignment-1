@@ -56,8 +56,6 @@ public class A1 {
 			String currWord = input.next().trim().toLowerCase().replaceAll("'s", "").replaceAll("[^A-Za-z]", "");
 			
 			if (currWord.length()> 0) {
-				totalwordcount++;
-			}
 
 			if (!existsInRoster(currWord)) {
 				  
@@ -77,6 +75,12 @@ public class A1 {
 		input.close();
 	}
 
+		/**
+		 * Helper method
+		 * checks if the given String input exists in the avengerRoster array
+		 * @param takes in the input, which is either a name, alias or invalid input
+		 * @return true, if the input is in the avengerRoster, false otherwise
+		 */
 	private boolean existsInRoster (String input){
 	    for(int i = 0; i < avengerRoster.length; i++){
 	        for(int j = 0; j < 2; j++){
