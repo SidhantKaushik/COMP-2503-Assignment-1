@@ -53,8 +53,7 @@ public class A1 {
 		while (input.hasNext()) {
 			
 			
-			String currWord = input.next().trim().toLowerCase().replaceAll("'s", "").replaceAll("[^A-Za-z]", "");
-			
+			String currWord = input.next().trim().toLowerCase().replaceAll("'s", "").replaceAll("[^a-z]", "");
 			if (!currWord.isEmpty()) {
 				totalwordcount++;
 			}
