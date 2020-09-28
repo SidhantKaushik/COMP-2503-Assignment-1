@@ -1,6 +1,10 @@
 import java.util.Comparator;
 
 public class LeastFrequent implements Comparator<Avenger>{
+	/*
+	 * Compare method takes two Avenger's and compares them
+	 * @param Avenger: Takes in the two avenger's in order to compare them.
+	 */
 	public int compare(Avenger o1, Avenger o2){
 		if (o1.getFreq()>o2.getFreq()) {
 			return 1;
