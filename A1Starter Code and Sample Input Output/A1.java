@@ -110,7 +110,7 @@ public class A1 {
 
 	private Avenger createAvenger(String input) {
 		
-		Avenger a = null;
+		Avenger a = null; 
 		
 		for (int r = 0; r < avengerRoster.length; r++) {
 			
@@ -124,7 +124,7 @@ public class A1 {
 					}
 				}		
 			}
-			
+			//a
 		}
 		return a;
 	}
