@@ -129,6 +129,15 @@ public class A1 {
 			}
 		}
 	}
+	
+		/**
+		 * Helper method
+		 * takes a users input, 
+		 * if its a name, it finds the corresponding alias and vise versa
+		 * then creates a new object with the corret name and alias 
+		 * @param takes in the input, which is either a name, alias or invalid input
+		 * @return returns the new Avenger object
+		 */
 
 	private Avenger createAvenger(String input) {
 		
