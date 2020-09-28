@@ -193,6 +193,7 @@ public class A1 {
 		/**
 		 * sorts the avengerArrayList from highest frequency to the least
 		 * if there is a tie, it sorts them into alphabetical order of their alias
+		 * displays the first four avengers after sorted
 		 * @return a string of each avenger mentioned in the correct order
 		 */
 	
@@ -202,11 +203,24 @@ public class A1 {
 		return collectionSort();
 	}
 	
+		/**
+		 * sorts the avengerArrayList from lowest to highest frequency
+		 * if there is a tie, it sorts them in ascending order of last name length
+		 * if there is still a tie, it sorts them in ascending alphabetical order of their last name
+		 * displays the first four after sorted
+		 * @return a string of each avenger mentioned in the correct order
+		 */
+	
 	private String leastPopular() {
 		Collections.sort(avengersArrayList, new LeastFrequent());
 		return collectionSort();
 	}
 	
+		/**
+		 * takes a sorted list and displays either the first four,
+		 * if the list contains less than four avengers, it displays the whole list
+		 * @return a string of each avenger mentioned in the correct order
+		 */
 	private String collectionSort() {
 		String avengerList = "";
 		if (avengersArrayList.size()>4) {
