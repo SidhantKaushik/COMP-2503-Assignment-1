@@ -40,21 +40,11 @@ public class A1 {
 		 */
 	private void readInput() {
 		Scanner input = new Scanner(System.in);
-		/*
-		In a loop, while the scanner object has not reached end of stream,
-		 	- read a word.
-		 	- clean up the word
-		    - if the word is not empty, add the word count. 
-		    - Check if the word is either an avenger alias or last name then
-				- Create a new avenger object with the corresponding alias and last name.
-				- if this avenger has already been mentioned, increase the frequency count for the object already in the list.
-				- if this avenger has not been mentioned before, add the newly created avenger to the list, remember to set the frequency.
-		*/ 
+
 		while (input.hasNext()) {
 			
-			
-			String currWord = input.next().trim().toLowerCase().replaceAll("'s", "").replaceAll("[^a-z]", "");
-			if (!currWord.isEmpty()) {
+			String currWord = input.next().toLowerCase().replaceAll("'s", "").replaceAll("[^a-z]", "").trim();
+			if (!currWord.isBlank()) {
 				totalwordcount++;
 			}
 
