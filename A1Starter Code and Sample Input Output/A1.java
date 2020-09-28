@@ -163,7 +163,7 @@ public class A1 {
 			for(int i = 0; i<4;i++) {
 				avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
 			}
-			}a
+			}
 			else {
 				for(int i = 0; i<avengersArrayList.size();i++) {
 					avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
