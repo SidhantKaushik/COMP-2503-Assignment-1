@@ -76,7 +76,7 @@ public class A1 {
 		input.close();
 	}
 
-		/*
+		/**
 		 * Helper method
 		 * checks if the given String input exists in the avengerRoster array
 		 * @param takes in the input, which is either a name, alias or invalid input
