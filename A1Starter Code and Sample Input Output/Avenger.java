@@ -8,7 +8,9 @@ public class Avenger implements Comparable <Avenger> {
         heroName = givenName;
         heroAlias = givenAlias;
     }
-
+    /*
+     * setFreq sets the frequency of an Avenger
+     */
     public void setFreq() {
 		frequency = 1;
 	}
