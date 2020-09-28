@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @date Fall 2020
 */
 
-public class A1 {
+public class A1 { 
 
 	public String[][] avengerRoster = { { "captainamerica", "rogers" }, { "ironman", "stark" },
 			{ "blackwidow", "romanoff" }, { "hulk", "banner" }, { "blackpanther", "tchalla" }, { "thor", "odinson" },
