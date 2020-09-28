@@ -152,7 +152,15 @@ public class A1 {
 		String avengerList = "";
 		
 		Collections.sort(avengersArrayList, new MostFrequent());
-		for(int i = 0; i<4;i++) {
+		for(int i = 0; i<avengersArrayList.size();i++) {
+			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
+		}
+		return avengerList;
+	}
+	private String leastPopular() {
+		String avengerList = "";
+		Collections.sort(avengersArrayList, new LeastFrequent());
+		for(int i = 0; i<avengersArrayList.size();i++) {
 			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
 		}
 		return avengerList;
@@ -178,7 +186,7 @@ public class A1 {
 		System.out.println("Top " + topN + " least popular avengers:");
 		// Todo: Print the least popular avengers, see the instructions for tie breaking
 		// Make sure you follow the formatting example in the sample output		
-		System.out.println();
+		System.out.println(leastPopular());
 
 		System.out.println("All mentioned avengers in alphabetical order:");
 		// Todo: Print the list of avengers in alphabetical order
