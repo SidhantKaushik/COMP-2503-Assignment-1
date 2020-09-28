@@ -152,7 +152,7 @@ public class A1 {
 		String avengerList = "";
 		
 		Collections.sort(avengersArrayList, new MostFrequent());
-		for(int i = 0; i<avengersArrayList.size();i++) {
+		for(int i = 0; i<4;i++) {
 			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
 		}
 		return avengerList;
@@ -173,7 +173,7 @@ public class A1 {
 		System.out.println("Top " + topN + " most popular avengers:");
 		// Todo: Print the most popular avengers, see the instructions for tie breaking
 		// Make sure you follow the formatting example in the sample output
-		System.out.println();
+		System.out.println(mostPopular());
 
 		System.out.println("Top " + topN + " least popular avengers:");
 		// Todo: Print the least popular avengers, see the instructions for tie breaking
