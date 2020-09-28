@@ -3,7 +3,7 @@ import java.util.Comparator;
 public class MostFrequent implements Comparator<Avenger> {
 
 		/**
-		 * compares two avengers by their frequency,
+		 * compares two avengers by descending frequency
 		 * if it is a tie, sorts them in ascending alphabetical order
 		 * @param two avengers to compare
 		 * @return returns a negative integer if the first argument is less than,

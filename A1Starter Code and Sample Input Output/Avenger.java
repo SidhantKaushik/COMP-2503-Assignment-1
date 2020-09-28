@@ -1,64 +1,91 @@
 
 public class Avenger implements Comparable <Avenger> {
-	//declaring variables
+
+		/**
+		 * declaring instance variables
+		 */
 	private String heroName;
 	private String heroAlias;
 	private int frequency;
+	
+		/**
+		 * Constructor
+		 * @param takes in two strings, the first one is the name
+		 * 			and the second one is the alias
+		 */
     public Avenger(String givenName, String givenAlias) {
         heroName = givenName;
         heroAlias = givenAlias;
     }
-    /*
-     * setFreq sets the frequency of an Avenger
-     */
+    
+	    /**
+		 * sets the frequency to 1
+		 */
+
     public void setFreq() {
 		frequency = 1;
 	}
-    /*
-     * increaseFreq increases the frequency of Avenger by 1
-     */
+    
+	    /**
+		 * increases the frequency by 1
+		 */
+    
     public void increaseFreq() {
         frequency++;
     }
-    /*
-     * getFreq returns the frequency
-     */
+
+	    /**
+		 * gets the frequency
+		 * @return returns the current frequency
+		 */
+    
     public int getFreq() {
     	return frequency;
     }
-    /*
-     * getName returns the Hero name
-     */
+    
+	    /**
+		 * gets the name
+		 * @return returns the heroName
+		 */
     public String getName() {
     	return heroName;
     }
-    /*
-     * get Alias returns the Hero's alias
-     */
+  
+	    /**
+		 * gets the alias
+		 * @return returns the heroAlias
+		 */
+    
     public String getAlias() {
     	return heroAlias;
     }
 	
+    	/**
+  		 * compares this object to another avenger
+  		 * compares them by their alias
+  		 * @param the avenger to compare to
+  		 */
 	@Override
-	/*
-	 * compareTo takes in one Avenger and compares it to another
-	 * @param Avenger needed to compare one to the other
-	 */
 	public int compareTo(Avenger other) {
 		return this.heroAlias.compareTo(other.heroAlias);
 	}
 	
-	/*
-	 * equals takes in one avenger and compares it with the other avenger
-	 * @param Avenger
-	 */
+		/**
+		 * compares if two avengers are equal
+		 * they are equal if they have the same alias name
+		 * @param other Avenger to check if equal
+		 * @return true if same alias name, false otherwise
+		*/
+	
     public boolean equals(Avenger other) {
         return this.heroAlias.equals(other.heroAlias);
     }
-    @Override
-    /*
-     * overriding toString to fit the format that was specified
-     */
+    
+    	/**
+  		 * overrides toString to fit the format that was specified
+  		 * @return String of avenger to display how many times it was mentioned
+  		*/
+     
     public String toString() {
     	String format = heroAlias + " aka " + heroName
     			+ " mentioned " + frequency + " time(s)";
