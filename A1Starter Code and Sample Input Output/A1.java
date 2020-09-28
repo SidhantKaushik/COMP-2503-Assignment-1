@@ -196,6 +196,7 @@ public class A1 {
 		Collections.sort(avengersArrayList, a);
 		return collectionSort();
 	}
+	
 	private String leastPopular() {
 		Collections.sort(avengersArrayList, new LeastFrequent());
 		return collectionSort();
@@ -216,9 +217,10 @@ public class A1 {
 		return avengerList;
 	}
 	
-	/**
-	 * print the results
-	 */
+		/**
+		 * prints the results
+		 *
+		 */
 	private void printResults() {
 		System.out.println("Total number of words: " + totalwordcount);
 		System.out.println("Number of Avengers Mentioned: " + avengersArrayList.size());
