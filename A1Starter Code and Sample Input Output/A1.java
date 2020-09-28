@@ -149,22 +149,29 @@ public class A1 {
 	}
 	
 	private String mostPopular() {
-		String avengerList = "";
-		
 		Collections.sort(avengersArrayList, new MostFrequent());
-		for(int i = 0; i<avengersArrayList.size();i++) {
-			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
-		}
-		return avengerList;
+		return collectionSort();
 	}
 	private String leastPopular() {
-		String avengerList = "";
 		Collections.sort(avengersArrayList, new LeastFrequent());
-		for(int i = 0; i<avengersArrayList.size();i++) {
-			avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
-		}
+		return collectionSort();
+	}
+	
+	private String collectionSort() {
+		String avengerList = "";
+		if (avengersArrayList.size()>4) {
+			for(int i = 0; i<4;i++) {
+				avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
+			}
+			}
+			else {
+				for(int i = 0; i<avengersArrayList.size();i++) {
+					avengerList = avengerList + avengersArrayList.get(i).toString() + "\n";
+				}
+			}
 		return avengerList;
 	}
+	
 	/**
 	 * print the results
 	 */
