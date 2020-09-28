@@ -1,10 +1,23 @@
 import java.util.Comparator;
 
+/**
+ * Comparator to sort avengersArrayList into the least four mentioned
+ * 
+ * @author Sidhant Kaushik, Erika Robles
+ * @version Fall 2020
+ */
+
 public class LeastFrequent implements Comparator<Avenger>{
-	/*
-	 * Compare method takes two Avenger's and compares them
-	 * @param Avenger: Takes in the two avenger's in order to compare them.
-	 */
+
+		/**
+		 * compares two avengers by ascending frequency,
+		 * if it is a tie, sorts them in ascending last name length
+		 * if it is still a tie, sorts them in ascending alphabetical order of last name
+		 * @param two avengers to compare
+		 * @return returns a negative integer if the first argument is less than,
+		 * 			0 if they are equal, and
+		 * 			positive if the first argument is greater than
+		 */
 	public int compare(Avenger o1, Avenger o2){
 		if (o1.getFreq()>o2.getFreq()) {
 			return 1;

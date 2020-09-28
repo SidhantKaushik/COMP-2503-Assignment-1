@@ -34,10 +34,10 @@ public class A1 {
 		
 	}
 
-	/**
-	 * read the input stream and keep track  
-	 * how many times avengers are mentioned by alias or last name.
-	 */
+		/**
+		 * read the input stream and keep track  
+		 * how many times avengers are mentioned by alias or last name.
+		 */
 	private void readInput() {
 		Scanner input = new Scanner(System.in);
 		/*
@@ -155,10 +155,15 @@ public class A1 {
 					}
 				}		
 			}
-			//a
+		
 		}
 		return a;
 	}
+	
+		/**
+		 * sorts the avengerArrayList in the order they are appeared on the input stream
+		 * @return a string of each avenger mentioned in the correct order
+		 */
 
 	private String ordered() {
 		String avengerList = "";
@@ -187,6 +192,7 @@ public class A1 {
 		/**
 		 * sorts the avengerArrayList from highest frequency to the least
 		 * if there is a tie, it sorts them into alphabetical order of their alias
+		 * displays the first four avengers after sorted
 		 * @return a string of each avenger mentioned in the correct order
 		 */
 	
@@ -195,11 +201,25 @@ public class A1 {
 		Collections.sort(avengersArrayList, a);
 		return collectionSort();
 	}
+	
+		/**
+		 * sorts the avengerArrayList from lowest to highest frequency
+		 * if there is a tie, it sorts them in ascending order of last name length
+		 * if there is still a tie, it sorts them in ascending alphabetical order of their last name
+		 * displays the first four after sorted
+		 * @return a string of each avenger mentioned in the correct order
+		 */
+	
 	private String leastPopular() {
 		Collections.sort(avengersArrayList, new LeastFrequent());
 		return collectionSort();
 	}
 	
+		/**
+		 * takes a sorted list and displays either the first four,
+		 * if the list contains less than four avengers, it displays the whole list
+		 * @return a string of each avenger mentioned in the correct order
+		 */
 	private String collectionSort() {
 		String avengerList = "";
 		if (avengersArrayList.size()>4) {
@@ -215,32 +235,25 @@ public class A1 {
 		return avengerList;
 	}
 	
-	/**
-	 * print the results
-	 */
+		/**
+		 * prints the results
+		 *
+		 */
 	private void printResults() {
 		System.out.println("Total number of words: " + totalwordcount);
 		System.out.println("Number of Avengers Mentioned: " + avengersArrayList.size());
 		System.out.println();
 
 		System.out.println("All avengers in the order they appeared in the input stream:");
-		// Todo: Print the list of avengers in the order they appeared in the input
-		// Make sure you follow the formatting example in the sample output
 		System.out.println(ordered());
 		
 		System.out.println("Top " + topN + " most popular avengers:");
-		// Todo: Print the most popular avengers, see the instructions for tie breaking
-		// Make sure you follow the formatting example in the sample output
 		System.out.println(mostPopular());
 
 		System.out.println("Top " + topN + " least popular avengers:");
-		// Todo: Print the least popular avengers, see the instructions for tie breaking
-		// Make sure you follow the formatting example in the sample output		
 		System.out.println(leastPopular());
 
 		System.out.println("All mentioned avengers in alphabetical order:");
-		// Todo: Print the list of avengers in alphabetical order
-		//System.out.println();
 		System.out.println(alphabeticalOrder());
 	}
 }
