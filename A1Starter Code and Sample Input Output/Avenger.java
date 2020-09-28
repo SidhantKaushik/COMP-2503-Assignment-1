@@ -1,10 +1,9 @@
 
 public class Avenger implements Comparable <Avenger> {
-
+	//declaring variables
 	private String heroName;
 	private String heroAlias;
 	private int frequency;
-
     public Avenger(String givenName, String givenAlias) {
         heroName = givenName;
         heroAlias = givenAlias;
