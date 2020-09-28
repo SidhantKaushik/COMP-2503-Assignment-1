@@ -40,19 +40,21 @@ public class A1 {
 		 */
 	private void readInput() {
 		Scanner input = new Scanner(System.in);
-	
 		while (input.hasNext()) {
 			String next = input.next();
 			if (next.contains("'")) {
+				//splitting the word to remove the '
 				String[] currWord1 = next.split("'");
+				//using the first part of the word to continue forward and is passed on to currWord
 				next = currWord1[0].toString();
 			}
+			//converting the word into a lowercase replacing every letter thats not a-z and trimming spaces
 			String currWord = next.toLowerCase().replaceAll("[^a-z]", "").trim();
-			
+			//adding to totalwordcount
 			if (!currWord.isBlank()) {
 				totalwordcount++;
 			}
-
+			//if the avenger doesnt exist then does this
 			if (!existsInRoster(currWord)) {
 				  
 				  Avenger a = createAvenger(currWord); // creates a new avenger object
